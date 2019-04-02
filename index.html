@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        background: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    webview {
+        position: absolute;
+        height: 500px;
+        width: 500px;
+        border: 1px solid black;
+    }
+    webview:active {
+        border-right: 5px solid yellow;
+    }
+</style>
+<body>
+<webview id="webview" src="https://www.google.com"></webview>
+</body>
+<script>
+    setTimeout(() => {
+        document.getElementById("webview").openDevTools();
+    }, 100);
+</script>
+</html>
